@@ -392,8 +392,7 @@ button {
 .socials-icon {
   fill: #f4f4fd;
 }
-.socials-link:hover,
-:focus {
+.socials-link:focus {
     background-color: #404bbf;
 }
 
