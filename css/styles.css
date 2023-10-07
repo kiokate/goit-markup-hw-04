@@ -392,7 +392,7 @@ button {
 .socials-icon {
   fill: #f4f4fd;
 }
-.socials-link:focus {
+.socials-link:hover {
     background-color: #404bbf;
 }
 
