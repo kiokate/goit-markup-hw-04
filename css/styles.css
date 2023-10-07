@@ -23,6 +23,7 @@ ol {
   padding-left: 0;
 }
 
+
 a {
   text-decoration: none;
   color: currentColor;
@@ -105,6 +106,23 @@ button {
   color: #404bbf;
 }
 
+.current {
+  color: #404bbf;
+   position: relative;
+ }
+ 
+ .current::after {
+   background-color: #404bbf;
+   width: 48px;
+   height: 4px;
+   border-radius: 2px;
+   content: "";
+   position: absolute;
+   display: block;
+   left: 0;
+   bottom: -1px;
+ }
+
 .contacts-list {
   margin-left: auto;
 }
@@ -183,6 +201,15 @@ button {
   padding: 120px 0;
 }
 
+.icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
 .content-title {
   color: #2e2f42;
   position: absolute;
@@ -281,6 +308,36 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
 }
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.socials-item {
+  width: 40px;
+  height: 40px;
+}
+
+.socials-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socials-icon {
+  fill: #f4f4fd;
+}
+
+.socials-link:hover,
+:focus {
+  background-color: #404bbf;
+}
 
 .portfolio {
   padding-top: 120px;
@@ -334,11 +391,47 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+.thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb .overlay {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 32px;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+  background: var(--IRIS, #4d5ae5);
+  color: #f4f4fd;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.our-portfolio-item:hover .overlay {
+  transform: translateY(0);
+  cursor: pointer;
+}
+
 
 /* Footer */
 .footer-text {
   background-color: #2e2f42;
   padding: 100px 0;
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-logo-container {
+  margin-right: 120px;
 }
 .footer-logo {
   color: #4d5ae5;
@@ -361,4 +454,41 @@ button {
 
 .title-two-part-fotter {
   color: #f4f4fd;
+}
+.socials-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-socials-item {
+  width: 40px;
+  height: 40px;
+}
+.footer-socials-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-socials-link:hover,
+:focus {
+  background-color: #31d0aa;
+}
+
+.footer-socials-icon {
+  fill: #f4f4fd;
 }
