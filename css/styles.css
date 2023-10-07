@@ -395,6 +395,9 @@ button {
 .socials-link:hover {
     background-color: #404bbf;
 }
+.socials-link:focus {
+    background-color: #404bbf;
+}
 
 
 .portfolio {
